@@ -9,12 +9,11 @@ First, fill out `.env` with the following:
 ```
 APP_URL='https://yourapp.glitch.me'
 API_KEY='this-can-be-anything-1234'
-
 ```
-Url of the app that will be calling your API (be sure to remove any trailing slashes), and an API key. Something random and hard to guess.
 
-You will also need to get API keys for [OpenWeatherMap](https://openweathermap.org/api) and [Flickr](http://www.flickr.com/services/apps/create/apply/).
+`APP_URL` is the url of the app that will be calling your API (be sure to remove any trailing slashes). You will also need to include `API_KEY` when making calls to your API. Make it something random and hard to guess.
 
+Apply for API keys for [OpenWeatherMap](https://openweathermap.org/api) and [Flickr](http://www.flickr.com/services/apps/create/apply/) and add them as well.
 
 ```
 OWM_APP_ID='1234abcd5678efg9'
@@ -23,16 +22,27 @@ FLICKR_API_KEY='1234abcd5678efg9'
 
 Now you can access your API at following endpoints:
 
-`yourapp.glitch.me/weather`
+### `yourapp.glitch.me/weather`
 
-This endpoint is fully automatic. It reads the IP address, gets the location based on it, and then loads the weather for the location.
+This endpoint is fully automatic, you only need to provide the API key.
+
+
+```
+https://yourapp.glitch.me/weather?api_key=your-api-key-1234
+```
+
+The script will detect the IP address and the location and then loads the weather for the location.
 
 Optionally you can pass a `units` parameter:
 
 - for temperature in Fahrenheit use `units=imperial` (this is the default if the `units` parameter is omited)
 - for temperature in Celsius use `units=metric`
 
+Example:
 
+```
+https://yourapp.glitch.me/weather?api_key=your-api-key-1234&units=metric
+```
 
 Here's a shortened example response:
 
@@ -74,9 +84,16 @@ Here's a shortened example response:
 ```
 
 
-`yourapp.glitch.me/background`
+### `yourapp.glitch.me/background`
 
 You need to provide `weather` which is text used to search Flickr, and location as `latitude`, and `longitude` that will help filter images based on where they were taken.
+
+Example request URL:
+
+```
+https://yourapp.glitch.me/background?api_key=your-api-key-1234&weather=cloudy&latitude=-12.34&longitude=98.76
+```
+
 
 Example response:
 
