@@ -126,6 +126,10 @@ Example response:
 }
 ```
 
+## Todo
+
+- add response caching
+
 ## Powered by
 
 - [IP-API.com](http://ip-api.com)
