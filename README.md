@@ -11,7 +11,7 @@ APP_URL='https://yourapp.glitch.me'
 API_KEY='this-can-be-anything-1234'
 ```
 
-`APP_URL` is the url of the app that will be calling your API (be sure to remove any trailing slashes). You will also need to include `API_KEY` when making calls to your API. Make it something random and hard to guess.
+`APP_URL` is the url of the app that will be calling your API. (Be sure to remove any trailing slashes). You will also need to include `API_KEY` when making calls to your API. Make it something random and hard to guess.
 
 Apply for API keys for [OpenWeatherMap](https://openweathermap.org/api) and [Flickr](http://www.flickr.com/services/apps/create/apply/) and add them as well.
 
