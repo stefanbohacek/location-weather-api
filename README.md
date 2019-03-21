@@ -140,6 +140,6 @@ Example response:
 ## Learn more
 
 - [Example weather web app](https://weather-web-app.glitch.me/) ([source code](https://glitch.com/edit/#!/weather-web-app?path=README.md))
-- [Weather web app tutorial](https://fourtonfish.com/blog/weather-web-app-web-api-tutorial/) (coming soon!)
+- [Weather web app tutorial](https://fourtonfish.com/blog/weather-web-app-web-api-tutorial/)
 
 Created by [@fourtonfish](https://twitter.com/fourtonfish) 
